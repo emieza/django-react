@@ -128,20 +128,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # API
 
 # TODO: remove that and leave just allowed origin list
-CORS_ALLOW_ALL_ORIGINS = True  # Utilitza-ho només en desenvolupament i amb precaució
+#CORS_ALLOW_ALL_ORIGINS = True  # Utilitza-ho només en desenvolupament i amb precaució
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",    # Exemple: React en desenvolupament amb Vite o CRA
-    "http://127.0.0.1:8000",
+    "http://localhost:5173",    # Exemple: React en desenvolupament amb Vite o CRA
+    "http://127.0.0.1:5173",
     "https://el-teu-dominio.com", # Quan el tinguis en producció
 ]
 
-CORS_ALLOW_CREDENTIALS = True
+"""CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-]
+]"""
 

@@ -12,6 +12,7 @@ class Llibre (models.Model):
 
 
 class Usuari(AbstractUser):
+    # token per a la autenticació de l'API
     auth_token = models.CharField(max_length=32,blank=True,null=True)
     # + altres atributs que es vulguin afegir...
 

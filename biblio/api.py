@@ -3,7 +3,7 @@ from ninja import NinjaAPI, Schema
 from ninja.security import HttpBasicAuth, HttpBearer
 from .models import *
 from typing import List, Optional, Union, Literal
-import secrets
+import secrets, datetime
 
 api = NinjaAPI()
 
@@ -45,6 +45,7 @@ class LlibreOut(Schema):
     id: int
     titol: str
     autor: str
+    data_edicio: datetime.date
     resum: Optional[str]
 
 @api.get("/llibres", response=List[LlibreOut])

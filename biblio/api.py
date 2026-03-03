@@ -52,3 +52,10 @@ class LlibreOut(Schema):
 def obtenir_libres(request):
     qs = Llibre.objects.all()
     return qs
+
+@api.get("/mesllibres", response=List[LlibreOut], auth=AuthBearer())
+@api.get("/mesllibres/", response=List[LlibreOut], auth=AuthBearer())
+def obtenir_libres(request):
+    qs = Llibre.objects.all()
+    return qs
+

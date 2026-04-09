@@ -1,11 +1,11 @@
 const API_URL = 'http://localhost:8000/api/llibres'; // Ajusta según tu Django API
 
 export const getBooks = () => {
-  console.log('llamando API...');
+  console.log('cridant API...');
   return fetch(API_URL)
     .then((response) => {
       if (!response.ok) {
-        throw new Error('Error al obtener los libros');
+        throw new Error("Error l'obtenir els llibres");
       }
       return response.json();
     })

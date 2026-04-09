@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
-class Llibre (models.Model):
+class Llibre(models.Model):
     titol = models.CharField(max_length=100)
     autor = models.CharField(max_length=200)
     resum = models.TextField(null=True,blank=True)
@@ -10,6 +10,10 @@ class Llibre (models.Model):
     def __str__(self):
     	return self.titol
 
+class Imatge(models.Model):
+    llibre = models.ForeignKey(Llibre,on_delete=models.CASCADE)
+    arxiu = models.ImageField(upload_to='imatges/')
+    desc = models.TextField(null=True,blank=True)
 
 class Usuari(AbstractUser):
     auth_token = models.CharField(max_length=32,blank=True,null=True)

@@ -130,7 +130,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Utilitza-ho només en desenvolupament i amb precaució
 #CORS_ALLOW_ALL_ORIGINS = True
 
-# Aquesta és la config adequada per a producció
+# Aquesta és la config adequada per a dev i producció
 CORS_ALLOWED_ORIGINS = env.list("CORS_ALLOWED_ORIGINS",default=[
     "http://localhost:5173",    # Exemple: React en desenvolupament amb Vite o CRA
     "http://127.0.0.1:5173",

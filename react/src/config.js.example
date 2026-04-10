@@ -1,0 +1,16 @@
+const config = {
+  development: {
+    DJANGO_API_URL: 'http://localhost:8000/api',
+    DJANGO_MEDIA_URL: 'http://localhost:8000',
+    DEBUG: true,
+  },
+  production: {
+    DJANGO_API_URL: 'https://elmeudomini.com/api',
+    DJANGO_MEDIA_URL: 'http://elmeudomini.com',
+    API_URL: 'https://api.produccio.com',
+    DEBUG: false,
+  }
+};
+
+const env = process.env.NODE_ENV || 'development';
+export default config[env];

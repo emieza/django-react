@@ -1,6 +1,8 @@
-// TODO: ajustar vars per producció en .env
-const API_BASE_URL = 'http://localhost:8000/api'
-export const IMAGE_SRC = "http://localhost:8000/"
+
+import config from '../config';
+
+const API_BASE_URL = config.API_URL;
+export const IMAGE_SRC = config.MEDIA_URL;
 
 export const getBooks = () => {
   console.log('cridant API...');

@@ -5,8 +5,10 @@ Biblioteca amb llibres i imatges dels llibres
 ## Instal·lació Django
 
     $ python3 -m venv env
+    $ source env/bin/activate
     (env) $ pip install -r requirements.txt
     (env) $ cp .env.example .env
+    (env) $ ./manage.py migrate
     (env) $ ./manage.py createsuperuser
     (env) $ ./manage.py runserver
 

@@ -143,4 +143,3 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
 ]"""
 
-print(CORS_ALLOWED_ORIGINS)

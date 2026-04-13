@@ -6,7 +6,7 @@ const config = {
   },
   production: {
     API_URL: 'https://elmeudomini.com/api',
-    MEDIA_URL: 'http://elmeudomini.com',
+    MEDIA_URL: 'https://elmeudomini.com',
     DEBUG: false,
   }
 };
